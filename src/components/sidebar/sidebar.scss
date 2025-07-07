@@ -9,6 +9,10 @@
   flex-direction: column;
   gap: 2rem;
   transition: all 3s ease-in-out;
+  
+  &.in-active{
+    border-right: 1px solid #38bdf8;
+  }
 
   .profile {
     display: flex;

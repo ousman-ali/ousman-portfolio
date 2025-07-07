@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './home.scss';
 
-const skills = ["React", "Node.js", "MongoDB", "Express", "Tailwind", "TypeScript"];
+const skills = ["React", "Node.js", "MongoDB", "Express", "Tailwind", "Sass", "Flutter", "Dart"];
 
 const Home = () => {
   const [currentSkillIndex, setCurrentSkillIndex] = useState(0);
