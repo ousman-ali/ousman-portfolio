@@ -11,9 +11,68 @@
   box-shadow: 0 4px 8px rgba(56, 189, 248, 0.4);
 
   .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
+  font-size: 1.5rem;
+  font-weight: bold;
+
+  span {
+    display: inline-block;
+    animation: pulseGlowColors 10s ease-in-out infinite;
   }
+
+  // Stagger each letter's animation delay by 0.2s
+  span:nth-child(1) { animation-delay: 0s; }
+  span:nth-child(2) { animation-delay: 0.2s; }
+  span:nth-child(3) { animation-delay: 0.4s; }
+  span:nth-child(4) { animation-delay: 0.6s; }
+  span:nth-child(5) { animation-delay: 0.8s; }
+  span:nth-child(6) { animation-delay: 1.0s; }
+  span:nth-child(7) { animation-delay: 1.2s; }
+  span:nth-child(8) { animation-delay: 1.4s; }
+}
+
+@keyframes pulseGlowColors {
+  0%, 25%, 100% {
+    text-shadow: none;
+  }
+
+  6.25%, 18.75% {
+    /* Green glow */
+    text-shadow:
+      0 0 5px #00ff00,
+      0 0 10px #00ff00,
+      0 0 20px #00ff00,
+      0 0 40px #00ff00;
+  }
+
+  31.25%, 43.75% {
+    /* Yellow glow */
+    text-shadow:
+      0 0 5px #ffff00,
+      0 0 10px #ffff00,
+      0 0 20px #ffff00,
+      0 0 40px #ffff00;
+  }
+
+  56.25%, 68.75% {
+    /* Red glow */
+    text-shadow:
+      0 0 5px #ff0000,
+      0 0 10px #ff0000,
+      0 0 20px #ff0000,
+      0 0 40px #ff0000;
+  }
+
+  81.25%, 93.75% {
+    /* Blue glow */
+    text-shadow:
+      0 0 5px #0000ff,
+      0 0 10px #0000ff,
+      0 0 20px #0000ff,
+      0 0 40px #0000ff;
+  }
+}
+
+
 
   .nav-links {
     list-style: none;

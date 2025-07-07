@@ -19,16 +19,13 @@
     gap: 2rem;
 
     .blog-card {
-      background: #fff;
-      border: 2px solid #38bdf8;
+      background-color: #0f172a;
+      box-shadow: 0 0 15px rgba(252, 253, 253, 0.4);
       border-radius: 12px;
       padding: 2rem;
       text-align: left;
       transition: box-shadow 0.3s ease;
-
-      &:hover {
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-      }
+      
 
       .blog-info {
         h3 {

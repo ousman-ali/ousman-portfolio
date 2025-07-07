@@ -19,10 +19,9 @@
     gap: 2rem;
 
     .project-card {
-      background: white;
-      border: 2px solid #38bdf8;
+      background-color: #0f172a;
+      box-shadow: 0 0 15px rgba(252, 253, 253, 0.4);
       border-radius: 12px;
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
       overflow: hidden;
       display: flex;
       flex-direction: column;

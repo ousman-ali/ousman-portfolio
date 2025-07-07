@@ -1,0 +1,104 @@
+.resume-section {
+  padding: 4rem 2rem;
+  background-color: #0f172a;
+  color: #e0e0e0;
+  text-align: center;
+  scroll-snap-align: start;
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #38bdf8;
+  }
+
+  .resume-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 2rem;
+
+    .resume-block {
+      background-color: #0f172a;
+      box-shadow: 0 0 15px rgba(252, 253, 253, 0.4);
+      padding: 2rem;
+      border-radius: 12px;
+      min-width: 280px;
+      flex: 1 1 300px;
+      text-align: left;
+
+      h3 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+        color: #60a5fa;
+      }
+
+      .item {
+        margin-bottom: 1.5rem;
+
+        h4 {
+          font-size: 1.3rem;
+          margin-bottom: 0.3rem;
+          color: #93c5fd;
+        }
+
+        span {
+          font-size: 0.9rem;
+          font-style: italic;
+          color: #a1a1aa;
+          display: block;
+          margin-bottom: 0.5rem;
+        }
+
+        p {
+          font-size: 1rem;
+          line-height: 1.4;
+          color: #cbd5e1;
+        }
+      }
+
+      .skills-list {
+        list-style: none;
+        padding: 0;
+
+        li {
+          font-size: 1.1rem;
+          margin-bottom: 0.7rem;
+          padding-left: 1rem;
+          position: relative;
+
+          &::before {
+            content: '•';
+            color: #38bdf8;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+
+  .btn-download {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: #38bdf8;
+    color: #0f172a;
+    font-weight: 700;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #0ea5e9;
+    }
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .resume-content {
+    flex-direction: column;
+    align-items: center;
+  }
+}

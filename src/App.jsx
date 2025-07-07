@@ -8,6 +8,7 @@ import Projects from "./components/projects/Projects";
 import Blog from "./components/blog/Blog";
 import Contact from "./components/contact/Contact";
 import FeaturedProjects from "./components/featured/FeaturedProjects";
+import Resume from "./components/resume/Resume";
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <About />
           <Skills />
           <Projects />
+          <Resume />
           <Blog />
           <Contact />
         </div>   
