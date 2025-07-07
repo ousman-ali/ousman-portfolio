@@ -34,6 +34,38 @@ const Sidebar = () => {
         <p>🌟 Special Projects & Highlights</p>
         {/* Add any special content here */}
       </div>
+      <div className="special">
+        <p>🌟 Special Projects & Highlights</p>
+        {/* Add any special content here */}
+      </div>
+      <div className="special">
+        <p>🌟 Special Projects & Highlights</p>
+        {/* Add any special content here */}
+      </div>
+      <div className="special">
+        <p>🌟 Special Projects & Highlights</p>
+        {/* Add any special content here */}
+      </div>
+      <div className="special">
+        <p>🌟 Special Projects & Highlights</p>
+        {/* Add any special content here */}
+      </div>
+      <div className="special">
+        <p>🌟 Special Projects & Highlights</p>
+        {/* Add any special content here */}
+      </div>
+      <div className="special">
+        <p>🌟 Special Projects & Highlights</p>
+        {/* Add any special content here */}
+      </div>
+      <div className="special">
+        <p>🌟 Special Projects & Highlights</p>
+        {/* Add any special content here */}
+      </div>
+      <div className="special">
+        <p>🌟 Special Projects & Highlights</p>
+        {/* Add any special content here */}
+      </div>
     </aside>
   );
 };

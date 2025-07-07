@@ -1,0 +1,60 @@
+.home-section {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0f172a;
+
+  scroll-snap-align: start;
+
+  .circle-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+
+    .center-skill {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 2rem;
+      font-weight: bold;
+      color: white;
+      z-index: 10;
+    }
+
+    .circle {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      animation: rotate 12s linear infinite;
+
+      .circle-item {
+        position: absolute;
+        font-weight: 600;
+        color: #38bdf8;
+        font-size: 1.1rem;
+        transition: transform 0.3s;
+
+        @for $i from 0 through 5 {
+          &.item-#{$i} {
+            $angle: 360deg / 6 * $i;
+            transform: rotate($angle) translate(130px) rotate(-$angle);
+            top: 50%;
+            left: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,49 @@
+.app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Make layout take remaining space, flex row */
+.layout {
+  flex: 1; /* fill height minus navbar */
+  display: flex;
+  overflow: hidden; /* prevent body scroll */
+  height: calc(100vh - 72px);
+}
+
+/* Sidebar container */
+.leftLayout {
+  flex: 3;
+  position: sticky;
+  overflow-y: auto; /* scroll sidebar if content overflows */
+}
+.leftLayout::-webkit-scrollbar {
+  width: 5px;  /* width of vertical scrollbar */
+  height: 8px; /* height of horizontal scrollbar */
+}
+/* Scrollbar thumb (the draggable part) */
+.leftLayout::-webkit-scrollbar-thumb {
+  background-color: #38bdf8; /* bright cyan */
+  border-radius: 4px;
+  border: 2px solid #1e293b; /* gives some padding around thumb */
+}
+.leftLayout::-webkit-scrollbar-thumb:hover {
+  background-color: #0ea5e9;
+}
+
+
+/* Main content scrolls */
+.rightLayout {
+  flex: 7;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;  /*enables snap */
+  scroll-behavior: smooth;       /*smooth transitions*/
+}
+.rightLayout::-webkit-scrollbar {
+  display: none;
+}
+.rightLayout {
+  -ms-overflow-style: none;
+  scrollbar-width: none; /* Firefox */
+}
