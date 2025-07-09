@@ -1,0 +1,133 @@
+.circleTopLeft {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 30px;
+  opacity: 0.3;
+  background-color: #0f172a;
+  box-shadow: 0 0 15px rgba(252, 253, 253, 0.4);
+  position: absolute;
+  top: 0;
+  left: 30%;
+  z-index: 1;
+  animation: circleTopLeftMove 10s linear infinite alternate;
+
+  span{
+    position: fixed;
+    color: rgb(237, 235, 235);
+    z-index: 999;
+  }
+
+}
+
+@keyframes circleTopLeftMove {
+  0% {
+    transform: translate(0%, 0%);
+  }
+  100% {
+    transform: translate(60vw, 80vh);
+  }
+}
+
+.circleBottomLeft {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  opacity: 0.3;
+  background-color: #0f172a;
+  box-shadow: 0 0 15px rgba(252, 253, 253, 0.4);
+  position: absolute;
+  bottom: 0;
+  left: 30%;
+  z-index: 1;
+  animation: circleBottomLeftMove 10s linear infinite alternate;
+
+  span{
+    position: fixed;
+    color: rgb(237, 235, 235);
+    z-index: 999;
+  }
+
+}
+
+@keyframes circleBottomLeftMove {
+  0% {
+    transform: translate(0%, 0%);
+  }
+  100% {
+    transform: translate(60vw, -80vh);
+  }
+}
+
+.squareTopRight {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  opacity: 0.3;
+  background-color: #0f172a;
+  box-shadow: 0 0 15px rgba(252, 253, 253, 0.4);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  animation: squareTopRightMove 10s linear infinite alternate;
+
+  span{
+    position: fixed;
+    color: rgb(237, 235, 235);
+    z-index: 999;
+  }
+
+}
+
+@keyframes squareTopRightMove {
+  0% {
+    transform: translate(0%, 0%);
+  }
+  100% {
+    transform: translate(-60vw, 80vh);  // Moves left and down
+  }
+}
+
+.squareBottomRight {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  background-color: #0f172a;
+  box-shadow: 0 0 15px rgba(252, 253, 253, 0.4);
+  opacity: 0.3;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  animation: squareBottomRightMove 10s linear infinite alternate;
+
+  span{
+    position: fixed;
+    color: rgb(237, 235, 235);
+    z-index: 999;
+  }
+
+}
+
+@keyframes squareBottomRightMove {
+  0% {
+    transform: translate(0%, 0%);
+  }
+  100% {
+    transform: translate(-60vw, -80vh);  // Moves left and down
+  }
+}

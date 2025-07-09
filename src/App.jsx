@@ -7,22 +7,43 @@ import Skills from "./components/skills/Skills";
 import Projects from "./components/projects/Projects";
 import Blog from "./components/blog/Blog";
 import Contact from "./components/contact/Contact";
-import FeaturedProjects from "./components/featured/FeaturedProjects";
 import Resume from "./components/resume/Resume";
+import { useEffect, useState } from "react";
 
 
 function App() {
 
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div className="app">
-      <Navbar />
+      <Navbar isMobile={isMobile} />
       <div className="layout">
-        <div className="leftLayout">
-          <Sidebar />
-        </div>  
+        {!isMobile && (
+          <div className="leftLayout">
+            <Sidebar />
+          </div>
+        )}  
         <div className="rightLayout">
-          <Home />
-          <FeaturedProjects />
+          {isMobile ? (
+          <div className="mobileSidebar" id="homeSidebar" >
+            <Sidebar />
+          </div>
+          ) : (
+            <div id="home" >
+              <Home />
+            </div>
+            
+          )}
           <About />
           <Skills />
           <Projects />

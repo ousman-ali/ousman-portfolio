@@ -1,14 +1,18 @@
+@import "../../global.scss";
+
 .resume-section {
   padding: 4rem 2rem;
   background-color: #0f172a;
   color: #e0e0e0;
   text-align: center;
   scroll-snap-align: start;
+  border-top:1px solid #3d3f2a;
+  border-bottom:1px solid #3d3f2a;
 
   h2 {
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: #38bdf8;
+    color: #bfcd2a;
   }
 
   .resume-content {
@@ -18,14 +22,66 @@
     gap: 3rem;
     margin-bottom: 2rem;
 
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .mobile-divider{
+      display: none;
+      border: none;
+      width: 300px;
+      height: 1px;
+      background: linear-gradient(
+          to right,
+          transparent,
+          #4993b3,
+          transparent
+        );
+        margin: auto 0;
+
+      @include mobile {
+        display: block;
+      }
+
+    }
+
+    .verticalLine{
+      width: 1px;
+      height: 300px;
+      align-self: center;
+      background: linear-gradient(
+        to top,
+        transparent,
+        #4993b3,
+        transparent
+      );
+      margin: 0 auto;
+
+      @include mobile {
+        width: 300px;
+        height: 1px;
+        background: linear-gradient(
+          to right,
+          transparent,
+          #4993b3,
+          transparent
+        );
+        margin: auto 0;
+      }
+    }
+
     .resume-block {
-      background-color: #0f172a;
-      box-shadow: 0 0 15px rgba(252, 253, 253, 0.4);
+      background: transparent;
       padding: 2rem;
       border-radius: 12px;
       min-width: 280px;
       flex: 1 1 300px;
       text-align: left;
+
+      @include mobile {
+        padding: 0;
+      }
 
       h3 {
         font-size: 1.8rem;
@@ -36,10 +92,14 @@
       .item {
         margin-bottom: 1.5rem;
 
+        @include mobile {
+          width: 100%;
+        }
+
         h4 {
           font-size: 1.3rem;
           margin-bottom: 0.3rem;
-          color: #93c5fd;
+          color: #9da16e;
         }
 
         span {
@@ -54,6 +114,12 @@
           font-size: 1rem;
           line-height: 1.4;
           color: #cbd5e1;
+
+          @include mobile {
+            text-align: justify;
+            font-size: 0.8rem;
+          }
+
         }
       }
 
@@ -95,10 +161,3 @@
   }
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .resume-content {
-    flex-direction: column;
-    align-items: center;
-  }
-}

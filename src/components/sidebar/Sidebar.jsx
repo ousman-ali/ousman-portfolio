@@ -42,11 +42,15 @@ const Sidebar = () => {
         <div className="connectLinks">
         <div className="connectIcon">
           <EmailOutlinedIcon className='icon'/>
-          <span>oasgerbalhl@gmail.com</span>
+          <a href="mailto:oasgerbalhl@gmail.com">
+            <span>oasgerbalhl@gmail.com</span>
+          </a>
         </div>
         <div className="connectIcon">
           <PhoneInTalkOutlinedIcon className='icon' />
-          <span>+251963649826</span>
+           <a href="tel:+251963649826">
+            <span>+251963649826</span>
+          </a>
         </div>
         <div className="connectIcon">
           <LocationOnOutlinedIcon className='icon' />

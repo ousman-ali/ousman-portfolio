@@ -1,40 +1,37 @@
-// src/components/Projects.jsx
-import React from 'react';
 import './projects.scss';
-
-const projects = [
-  {
-    title: "Social Media App",
-    description:
-      "A full-stack social media platform with user authentication, real-time chat, and media uploads.",
-    technologies: ["React", "Node.js", "Express", "MongoDB", "Socket.io"],
-    image: "/images/social-app.png", // replace with your own image path
-    live: "https://yoursocialapp.vercel.app",
-    code: "https://github.com/yourusername/social-app",
-  },
-  {
-    title: "Portfolio Website",
-    description:
-      "My personal portfolio built with React and Vite, showcasing my work and skills.",
-    technologies: ["React", "Vite", "Sass"],
-    image: "/images/portfolio.png",
-    live: "https://yourportfolio.com",
-    code: "https://github.com/yourusername/portfolio",
-  },
-  // Add more projects here
-];
+import { DoneProjects } from '../../data';
+import { useState } from 'react';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
 const Projects = () => {
+
+  const [expandedIndex, setExpandedIndex] = useState(null);
+
+  const toggleRead = (index) => {
+    setExpandedIndex(prevIndex => prevIndex === index ? null : index);
+  };
+
   return (
     <section className="projects-section" id="projects">
       <h2>Projects</h2>
       <div className="projects-grid">
-        {projects.map((project, index) => (
+        {DoneProjects.map((project, index) => (
           <div className="project-card" key={index}>
-            <img src={project.image} alt={project.title} />
+            <img src={project.img} alt={project.title} />
             <div className="project-content">
               <h3>{project.title}</h3>
-              <p>{project.description}</p>
+
+              <span onClick={() => toggleRead(index)} style={{ cursor: "pointer", color: "#38bdf8" }}>
+                {expandedIndex === index ? (
+                  <>Hide... <KeyboardArrowUpIcon /></>
+                ) : (
+                  <>Read... <KeyboardArrowDownIcon /></>
+                )}
+              </span>
+
+              {expandedIndex === index && <p>{project.desc}</p>}
+
               <ul>
                 {project.technologies.map((tech, i) => (
                   <li key={i}>{tech}</li>
@@ -44,7 +41,7 @@ const Projects = () => {
                 <a href={project.live} target="_blank" rel="noopener noreferrer">
                   Live
                 </a>
-                <a href={project.code} target="_blank" rel="noopener noreferrer">
+                <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
                   Code
                 </a>
               </div>

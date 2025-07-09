@@ -4,41 +4,38 @@
   flex-direction: column;
 }
 
-/* Make layout take remaining space, flex row */
 .layout {
-  flex: 1; /* fill height minus navbar */
+  flex: 1; 
   display: flex;
-  overflow: hidden; /* prevent body scroll */
+  overflow: hidden;
   height: calc(100vh - 72px);
 }
 
-/* Sidebar container */
 .leftLayout {
   flex: 3;
   position: sticky;
-  overflow-y: auto; /* scroll sidebar if content overflows */
+  overflow-y: auto; 
 }
 .leftLayout::-webkit-scrollbar {
-  width: 5px;  /* width of vertical scrollbar */
-  height: 8px; /* height of horizontal scrollbar */
+  width: 5px; 
+  height: 8px; 
 }
-/* Scrollbar thumb (the draggable part) */
+
 .leftLayout::-webkit-scrollbar-thumb {
-  background-color: #38bdf8; /* bright cyan */
+  background-color: #38bdf8; 
   border-radius: 4px;
-  border: 2px solid #1e293b; /* gives some padding around thumb */
+  border: 2px solid #1e293b;
 }
 .leftLayout::-webkit-scrollbar-thumb:hover {
   background-color: #0ea5e9;
 }
 
 
-/* Main content scrolls */
 .rightLayout {
   flex: 7;
   overflow-y: auto;
-  scroll-snap-type: y mandatory;  /*enables snap */
-  scroll-behavior: smooth;       /*smooth transitions*/
+  scroll-snap-type: y mandatory;  
+  scroll-behavior: smooth;     
 }
 .rightLayout::-webkit-scrollbar {
   display: none;
@@ -46,4 +43,17 @@
 .rightLayout {
   -ms-overflow-style: none;
   scrollbar-width: none; /* Firefox */
+}
+
+.mobileSidebar {
+  width: 100%;
+  background-color: #0f172a;
+  padding: 10px 0;
+  scroll-snap-align: start;
+}
+
+@media (max-width: 768px) {
+  .leftLayout {
+    display: none;
+  }
 }

@@ -1,3 +1,5 @@
+@import "../../global.scss";
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -36,7 +38,6 @@
   }
 
   6.25%, 18.75% {
-    /* Green glow */
     text-shadow:
       0 0 5px #00ff00,
       0 0 10px #00ff00,
@@ -45,7 +46,6 @@
   }
 
   31.25%, 43.75% {
-    /* Yellow glow */
     text-shadow:
       0 0 5px #ffff00,
       0 0 10px #ffff00,
@@ -54,7 +54,6 @@
   }
 
   56.25%, 68.75% {
-    /* Red glow */
     text-shadow:
       0 0 5px #ff0000,
       0 0 10px #ff0000,
@@ -63,7 +62,6 @@
   }
 
   81.25%, 93.75% {
-    /* Blue glow */
     text-shadow:
       0 0 5px #0000ff,
       0 0 10px #0000ff,
@@ -81,11 +79,18 @@
 
     li a {
       position: relative;
-      color: white;
+      color: rgb(205, 204, 204);
       text-decoration: none;
       font-size: 1rem;
       transition: color 0.3s ease;
       padding-bottom: 5px;
+
+      @include mobile {
+        margin-left: 100px;
+        &:hover {
+          color: #38bdf8;
+        }
+      }
 
       &::after {
         content: '';
@@ -102,18 +107,19 @@
         color: #38bdf8;
 
         &::after {
-        width: 100%;
+        display: none;
       }
 
       }
     }
 
-    @media (max-width: 768px) {
+    @include mobile {
       position: absolute;
       top: 100%;
-      left: 0;
+      left: 100px;
       right: 0;
-      background: #1e293b;
+      background-color: #0f172a;
+      border: 1px solid rgb(63, 62, 62);
       flex-direction: column;
       padding: 1rem 0;
       display: none;
@@ -127,6 +133,8 @@
   .hamburger {
     display: none;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     gap: 5px;
 
@@ -138,7 +146,7 @@
     }
 
     &.open span:nth-child(1) {
-      transform: rotate(45deg) translateY(8px);
+      transform: rotate(45deg) translateY(11px);
     }
 
     &.open span:nth-child(2) {
@@ -146,10 +154,10 @@
     }
 
     &.open span:nth-child(3) {
-      transform: rotate(-45deg) translateY(-8px);
+      transform: rotate(-45deg) translateY(-11px);
     }
 
-    @media (max-width: 768px) {
+    @include mobile {
       display: flex;
     }
   }

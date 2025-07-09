@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './home.scss';
+import { AnimatedShapes } from '../animatedShapes/AnimatedShapes';
 
-const skills = ["React", "Node.js", "MongoDB", "Express", "Tailwind", "Sass", "Flutter", "Dart"];
+const skills = ["React", "Node.js", "MongoDB", "Tailwind", "Sass", "Flutter", "Dart"];
+const logos = ["react.webp", "nodejs-logo.png", "mongoDB-logo.png", "tailwind-logo.png", "sass-logo.png", "flutter-logo.png", "Dart-logo.png"];
 
 const Home = () => {
   const [currentSkillIndex, setCurrentSkillIndex] = useState(0);
@@ -15,18 +17,19 @@ const Home = () => {
   }, []);
 
   return (
-    <section id='home' className="home-section">
+    <section className="home-section">
       <div className="circle-container">
         <div className="center-skill">{skills[currentSkillIndex]}</div>
 
         <div className="circle">
-          {skills.map((skill, index) => (
+          {logos.map((logo, index) => (
             <div key={index} className={`circle-item item-${index}`}>
-              {skill}
+              <img src={logo} alt="" />
             </div>
           ))}
         </div>
       </div>
+      <AnimatedShapes />
     </section>
   );
 };
