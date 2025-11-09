@@ -51,6 +51,8 @@ const Resume = () => {
             <li>Git / GitHub</li>
             <li>REST APIs / MongoDB</li>
             <li>Flutter & Dart</li>
+            <li>Laravel & php</li>
+            <li>Next.js</li>
           </ul>
         </div>
 
