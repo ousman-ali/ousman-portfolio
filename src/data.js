@@ -26,7 +26,7 @@ export const DoneProjects = [
     title: "Dematsa Trading PLC",
     img: "projects/dematsa.jpg",
     desc: "The Dematsa Trading website, developed using Laravel for the backend, Next.js for the dashboard and user interface, serves as a professional platform to showcase the company’s products, services, and projects. With a modern and visually engaging design, users can easily navigate through product catalogs, service listings, and company information. The site includes interactive elements such as image sliders and hover effects to enhance engagement, while its dynamic content management ensures smooth updates and a consistently up-to-date presentation of the company’s offerings.",
-    live: "https://dematsatradingplc.com/",
+    live: "https://dematsatrading.com",
     technologies: ["Next.js", "Laravel", "Bootstrap", "css"],
     githubLink: "https://github.com/keradiontechnology/dematsa-trading-website",
     linkedlnLink: "",
